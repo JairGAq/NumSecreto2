@@ -1,7 +1,7 @@
 // Autor: Jair Guerrero
 
 let numeroSecreto = generarNumeroSecreto();
-
+let intentos = 1;
 
 
 function asignarTextoElemento(elemento, texto){
@@ -13,12 +13,13 @@ function verificarIntento(){
     let numeroDeUsuario = parseInt(document.getElementById('valorUsuario').value);
     console.log(numeroSecreto);
     if (numeroDeUsuario === numeroSecreto){
-        asignarTextoElemento('p','Acertaste el numero')
+        asignarTextoElemento('p',`Acertaste el numero en ${intentos} ${intentos === 1 ? 'vez' : 'veces'}`);
     }else if (numeroDeUsuario > numeroSecreto){
         asignarTextoElemento('p','El numero secreto es menor')
     }else{
         asignarTextoElemento('p','El numero secreto es mayor')
     }
+    intentos++;
     return;
 }
 
