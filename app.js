@@ -11,7 +11,6 @@ function asignarTextoElemento(elemento, texto){
 }
 function verificarIntento(){
     let numeroDeUsuario = parseInt(document.getElementById('valorUsuario').value);
-    console.log(numeroSecreto);
     if (numeroDeUsuario === numeroSecreto){
         asignarTextoElemento('p',`Acertaste el numero en ${intentos} ${intentos === 1 ? 'vez' : 'veces'}`);
     }else if (numeroDeUsuario > numeroSecreto){
